@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css?family=Mukta:300,400,500,600,700');
+  
+body {
+  background-color: #f4f4f4;
+  font-size:62.5%;
+}
+html, body {
+  margin: 0px;
+  font-family:'Mukta';
+  color:#485255;
+}
+header {
+  margin: 2.5rem 0 2.4rem 4rem;
+}
+
+#main {
+  position: relative;
+  padding: 50px 50px;
+}
+h1 {
+  font-weight:500;
+  font-size: 4em;
+  margin-bottom:0px;
+}
+p {
+  margin-top:0;
+  font-weight:300;
+  font-size: 1.8em;
+}
+header a, a:active {
+  font-weight: 500;
+  text-decoration: none;
+  color: #ed7d54;
+  transition: color 0.5s;
+-webkit-transition: all ease 0.5s;
+-moz-transition: all ease 0.5s;
+-o-transition: all ease 0.5s;
+-ms-transition: all ease 0.5s ;
+transition: all ease 0.5s ;
+}
+header a:hover {
+  color: #f0c4b3;
+  -webkit-transition: all ease 0.7s;
+-moz-transition: all ease 0.7s;
+-o-transition: all ease 0.7s;
+-ms-transition: all ease 0.7s ;
+transition: all ease 0.5s ;
+}
+.shape-box {
+  padding: 25px 25px; 
+  float:left;
+}
+.clear {
+  clear:both;
+}
+
+
+/* Pacman 1 is hungry */
+#pacman-one {
+  width: 0px;
+  height: 0px;
+  border-right: 50px solid transparent;
+  border-top: 50px solid #6bc1ef;
+  border-left: 50px solid #6bc1ef;
+  border-bottom: 50px solid #6bc1ef;
+  border-top-right-radius: 50px;
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+}
+
+/*Pacman 2 eats */
+
+.pacman-two-top {
+  width: 100px;
+  height: 50px;
+  background-color: #7c40ed;
+  border-radius: 50px 50px 0 0;
+  animation: pac-two-top 0.5s infinite;
+}
+.pacman-two-bottom {
+  width: 100px;
+  height: 50px;
+  background-color: #7c40ed;
+  border-radius: 0 0 50px 50px;
+  animation: pac-two-bottom 0.5s infinite;
+}
+
+.miam {
+  width:15px;
+  height:15px;
+  border-radius: 50px;
+  margin-top: -55px;
+  margin-left: 30px;
+  animation: miam-miam 0.5s linear infinite;
+}
+
+/* anim pacman */
+@keyframes pac-two-top {
+  0% {transform: rotate(0deg);}
+  50% {transform: rotate(-30deg);}
+}
+
+@keyframes pac-two-bottom {
+  0% {transform: rotate(0deg);}
+  50% {transform: rotate(30deg);}
+}
+
+@-webkit-keyframes pac-two-top {
+  0% {transform: rotate(0deg);}
+  50% {transform: rotate(-30deg);}
+}
+
+@-webkit-keyframes pac-two-bottom {
+  0% {transform: rotate(0deg);}
+  50% {transform: rotate(30deg);}
+}
+
+/* anim miam */
+@keyframes miam-miam {
+    0% { box-shadow:
+    100px 0px 0 0 rgba(72, 234, 146, 1),
+    160px 0px 0 0 rgba(72, 234, 146, 1),
+    220px 0px 0 0 #48ea92,
+    280px 0px 0 0 #48ea92,
+    340px 0px 0 0 #48ea92,
+    400px 0px 0 0 #48ea92,
+    460px 0px 0 0 rgba(72, 234, 146, 0);  
+  }
+  100% { box-shadow:
+    0px 0px 0 0 rgba(72, 234, 146, 0),
+    100px 0px 0 0 rgba(72, 234, 146, 0.8),
+    160px 0px 0 0 #48ea92,
+    220px 0px 0 0 #48ea92,
+    280px 0px 0 0 #48ea92,
+    340px 0px 0 0 #48ea92,
+    400px 0px 0 0 rgba(72, 234, 146, 1);
+  }
+}
+
+
+/* Pacman 3 */
+#pacman-three {
+  width: 0px;
+  height: 0px;
+  border-top: 45px solid transparent;
+  border-left: 60px solid #5ae2bd;
+  border-bottom: 45px solid transparent;
+  animation: pac3 1s linear infinite;
+  transform-origin: 50% 50%;
+}
+
+/* anim pacman 3 */
+@keyframes pac3 {
+  0% {transform: rotate(0deg);}
+  100% {transform: rotate(360deg);}
+}
+
+#shape-four {
+  width: 0px;
+  height: 0px;
+  border-top: 40px solid #f47f53;
+  border-right: 40px solid transparent;
+  border-left: 40px solid transparent;
+  border-bottom: 40px solid #6bc1ef;
+  animation: four 2s linear infinite;
+}
+
+@keyframes four {
+  50% {
+  border-top: 40px solid #f47f5e;
+  border-right: 40px solid transparent;
+  border-left: 40px solid transparent;
+  border-bottom: 40px solid #6edeff;
+  }
+ 100% {
+  border-top: 15px solid #e5774e;
+  border-right: 40px solid transparent;
+  border-left: 40px solid transparent;
+  border-bottom: 50px solid #6bc1ef;
+  }
+}
