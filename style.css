@@ -195,6 +195,6 @@ transition: all ease 0.5s ;
 
 @media only screen and (max-width: 480px) {
   .shape-box {
-    float:none;
+    float: none;
   }
 }
